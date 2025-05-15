@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Advanced HTML & JSON Converter</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<h1>Advanced HTML & JSON Converter</h1>
+<div class="container">
+  <!-- HTML to JSON -->
+  <section>
+    <h2>HTML to JSON</h2>
+    <div class="drop-zone" id="htmlDropZone">Drag & Drop HTML file here or click to select</div>
+    <input type="file" id="htmlFileInput" accept=".html,.txt" style="display:none" />
+    <textarea id="htmlInput" placeholder="Enter HTML here..."></textarea>
+    <div class="buttons-group">
+      <button id="clearHtmlInput">Clear</button>
+      <button id="copyHtmlInput">Copy</button>
+    </div>
+    <button id="htmlToJsonBtn">Convert HTML to JSON</button>
+    <pre id="jsonOutput"></pre>
+    <div class="buttons-group">
+      <button id="clearJsonOutput">Clear Output</button>
+      <button id="copyJsonOutput">Copy Output</button>
+    </div>
+  </section>
+
+  <!-- JSON to HTML -->
+  <section>
+    <h2>JSON to HTML</h2>
+    <div class="drop-zone" id="jsonDropZone">Drag & Drop JSON file here or click to select</div>
+    <input type="file" id="jsonFileInput" accept=".json" style="display:none" />
+    <textarea id="jsonInput" placeholder='Enter JSON here...'></textarea>
+    <div class="buttons-group">
+      <button id="clearJsonInput">Clear</button>
+      <button id="copyJsonInput">Copy</button>
+    </div>
+    <button id="jsonToHtmlBtn">Convert JSON to HTML</button>
+    <button id="viewHtmlBtn">View HTML</button>
+    <div id="htmlOutput" class="html-preview"></div>
+    <div class="buttons-group">
+      <button id="clearHtmlOutput">Clear</button>
+      <button id="copyHtmlOutput">Copy</button>
+    </div>
+  </section>
+</div>
+
+<!-- Modal for viewing HTML code -->
+<div id="htmlModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeModal">&times;</span>
+    <h3>Generated HTML Code</h3>
+    <pre id="modalHtmlContent"></pre>
+    <button id="copyModalHtml">Copy HTML Code</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
